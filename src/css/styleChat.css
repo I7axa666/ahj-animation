@@ -1,0 +1,140 @@
+.circle {
+    height: 50px;
+    width: 50px;
+    
+    border-radius: 100%;
+    background-color: red;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+
+    z-index: 10;
+
+}
+
+.circle:hover {
+    height: 60px;
+    width: 60px;
+
+    cursor: pointer;
+}
+
+.chat-container {
+    height: 0;
+    width: 300px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: beige;
+    display: flex;
+    flex-direction: column;  
+
+    position:absolute;
+    bottom: 100px;
+    right: 100px;
+
+    overflow: hidden;
+}
+
+
+.text-area {
+    width: 80%;
+    border-radius: 5px;
+    align-self: center;
+}
+
+.send-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-self: center;
+
+    width: 80%;
+}
+
+h3 {
+    margin-left: 25px;
+}
+
+span {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.open-chat {
+    animation-name: open-chat;
+    animation-duration: 0.1s;
+    transition-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes open-chat {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 300px;
+    }
+}
+
+.close-circle {
+    animation-name: close-circle;
+    animation-duration: 0.1s;
+    transition-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes close-circle {
+    0% {
+        height: 60px;
+        width: 60px;
+    }
+
+    100% {
+        height: 0;
+        width: 0;
+    }
+}
+
+.open-circle {
+    animation: open-circle;
+    animation-duration: 0.1s;
+    transition-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes open-circle {
+    0% {
+        height: 0;
+        width: 0;
+    }
+
+    100% {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.close-chat {
+    animation: close-chat;
+    animation-duration: 0.1s;
+    transition-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes close-chat {
+    0% {
+        height: 300px;
+    }
+
+    100% {
+        height: 0;
+    }
+}
